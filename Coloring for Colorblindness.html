@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!-- saved from url=(0078)https://davidmathlogic.com/colorblind/#%23D81B60-%231E88E5-%23FFC107-%23004D40 -->
+<html lang="en" prefix="og: http://ogp.me/ns#"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Coloring for Colorblindness</title><script type="text/javascript" async="" src="./Coloring for Colorblindness_files/analytics.js.download"></script><script async="" src="./Coloring for Colorblindness_files/js"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-114390725-1',{'page_title':'colorblindness app','page_path':'/colorblind'});</script><link href="./Coloring for Colorblindness_files/font-awesome.min.css" rel="stylesheet"><link href="./Coloring for Colorblindness_files/css" rel="stylesheet"><meta name="author" content="David Nichols"><meta name="description" content="This interactive visual tool lets you see how accessible your color palettes are to viewers who are colorblind."><meta name="keywords" content="colorblindness, color blindness, color vision, accessibility, ADA"><meta property="og:title" content="Coloring for Colorblindness"><meta property="og:type" content="website"><meta property="og:url" content="http://www.davidmathlogic.com/colorblind/"><meta property="og:image" content="http://www.davidmathlogic.com/static/og.png"><meta property="og:image:alt" content="Four color palettes side by side for comparison."><meta property="og:description" content="This interactive visual tool lets you see how accessible your color palettes are to viewers who are colorblind."><link href="./Coloring for Colorblindness_files/app.963b3ce94ce7e9be8c93ac0a1837ccf1.css" rel="stylesheet"><style type="text/css">
+.vc-chrome {
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 0 2px rgba(0,0,0,.3), 0 4px 8px rgba(0,0,0,.3);
+  box-sizing: initial;
+  width: 225px;
+  font-family: Menlo;
+  background-color: #fff;
+}
+.vc-chrome-controls {
+  display: flex;
+}
+.vc-chrome-color-wrap {
+  position: relative;
+  width: 36px;
+}
+.vc-chrome-active-color {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  z-index: 1;
+}
+.vc-chrome-color-wrap .vc-checkerboard {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-size: auto;
+}
+.vc-chrome-sliders {
+  flex: 1;
+}
+.vc-chrome-fields-wrap {
+  display: flex;
+  padding-top: 16px;
+}
+.vc-chrome-fields {
+  display: flex;
+  margin-left: -6px;
+  flex: 1;
+}
+.vc-chrome-field {
+  padding-left: 6px;
+  width: 100%;
+}
+.vc-chrome-toggle-btn {
+  width: 32px;
+  text-align: right;
+  position: relative;
+}
+.vc-chrome-toggle-icon {
+  margin-right: -4px;
+  margin-top: 12px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+.vc-chrome-toggle-icon-highlight {
+  position: absolute;
+  width: 24px;
+  height: 28px;
+  background: #eee;
+  border-radius: 4px;
+  top: 10px;
+  left: 12px;
+}
+.vc-chrome-hue-wrap {
+  position: relative;
+  height: 10px;
+  margin-bottom: 8px;
+}
+.vc-chrome-alpha-wrap {
+  position: relative;
+  height: 10px;
+}
+.vc-chrome-hue-wrap .vc-hue {
+  border-radius: 2px;
+}
+.vc-chrome-alpha-wrap .vc-alpha-gradient {
+  border-radius: 2px;
+}
+.vc-chrome-hue-wrap .vc-hue-picker, .vc-chrome-alpha-wrap .vc-alpha-picker {
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  transform: translate(-6px, -2px);
+  background-color: rgb(248, 248, 248);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+}
+.vc-chrome-body {
+  padding: 16px 16px 12px;
+  background-color: #fff;
+}
+.vc-chrome-saturation-wrap {
+  width: 100%;
+  padding-bottom: 55%;
+  position: relative;
+  border-radius: 2px 2px 0 0;
+  overflow: hidden;
+}
+.vc-chrome-saturation-wrap .vc-saturation-circle {
+  width: 12px;
+  height: 12px;
+}
+.vc-chrome-fields .vc-input__input {
+  font-size: 11px;
+  color: #333;
+  width: 100%;
+  border-radius: 2px;
+  border: none;
+  box-shadow: inset 0 0 0 1px #dadada;
+  height: 21px;
+  text-align: center;
+}
+.vc-chrome-fields .vc-input__label {
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 11px;
+  color: #969696;
+  text-align: center;
+  display: block;
+  margin-top: 12px;
+}
+.vc-chrome__disable-alpha .vc-chrome-active-color {
+  width: 18px;
+  height: 18px;
+}
+.vc-chrome__disable-alpha .vc-chrome-color-wrap {
+  width: 30px;
+}
+.vc-chrome__disable-alpha .vc-chrome-hue-wrap {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+</style><style type="text/css">
+.vc-saturation,
+.vc-saturation--white,
+.vc-saturation--black {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.vc-saturation--white {
+  background: linear-gradient(to right, #fff, rgba(255,255,255,0));
+}
+.vc-saturation--black {
+  background: linear-gradient(to top, #000, rgba(0,0,0,0));
+}
+.vc-saturation-pointer {
+  cursor: pointer;
+  position: absolute;
+}
+.vc-saturation-circle {
+  cursor: head;
+  width: 4px;
+  height: 4px;
+  box-shadow: 0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,.3), 0 0 1px 2px rgba(0,0,0,.4);
+  border-radius: 50%;
+  transform: translate(-2px, -2px);
+}
+</style><style type="text/css">
+.vc-hue {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  border-radius: 2px;
+}
+.vc-hue--horizontal {
+  background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);
+}
+.vc-hue--vertical {
+  background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);
+}
+.vc-hue-container {
+  cursor: pointer;
+  margin: 0 2px;
+  position: relative;
+  height: 100%;
+}
+.vc-hue-pointer {
+  z-index: 2;
+  position: absolute;
+}
+.vc-hue-picker {
+  cursor: pointer;
+  margin-top: 1px;
+  width: 4px;
+  border-radius: 1px;
+  height: 8px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, .6);
+  background: #fff;
+  transform: translateX(-2px) ;
+}
+</style><style type="text/css">
+.vc-editable-input {
+  position: relative;
+}
+.vc-input__input {
+  padding: 0;
+  border: 0;
+  outline: none;
+}
+.vc-input__label {
+  text-transform: capitalize;
+}
+</style></head><body style=""><div id="app"><header class="p-4 shadow-md border-t-4 border-black flex flex-wrap text-center justify-center sm:justify-between items-center text-center"><h1>Coloring for Colorblindness</h1> <a href="http://www.davidmathlogic.com/" target="_blank">by David Nichols</a></header> <main><h2 class="mt-0">We see colors differently</h2> <p>
+      About 1 in 20 people are colorblind in some way. This means that one or more of the types of cone cells in their eyes — the cells we use to detect color — does not work normally. Because of this, a person who is colorblind sees a reduced color space; two colors which appear distinct to a person with normal color vision may appear to be the same to a person who is colorblind. This phenomenon is not random. Mathematically, there are lines through color space — called "confusion lines" — such that every color on a confusion line appears the same to a person who is colorblind as every other color on that same confusion line. 
+    </p> <p>
+      This means that we can, to some degree, simulate colorblindness. By mathematically replicating the confusion line phenomenon, we can replace the colors in a picture so that if two of the original colors are on the same confusion line, they each get replaced by the same new color. If we do this the right way, a person with normal color vision can experience something like colorblindness. 
+    </p> <p>
+      This website is for people with normal or nearly normal color vision. The purpose of this website is to simulate for you what your chosen color palette looks like to viewers who are colorblind. The colors in the leftmost column are the "true" colors; these are displayed in the remaining three columns the way that a person with <b>prot</b>anopia, <b>deut</b>eranopia, or <b>trit</b>anopia would see them, respectively. 
+    </p> <h2 class="text-center">Color Palette</h2> <div class="flex flex-row justify-center items-start pb-2"><div class="flex flex-col shadow-md justify-center items-center p-2 mx-2 h-auto bg-white-dark"><div class="w-16 h-8 flex justify-center items-start font-bold">
+    True
+  </div> <div class="w-16 h-16 swatch" style="background: rgb(216, 27, 96);"></div><div class="w-16 h-16 swatch" style="background: rgb(30, 136, 229);"></div><div class="w-16 h-16 swatch" style="background: rgb(255, 193, 7);"></div><div class="w-16 h-16 swatch" style="background: rgb(0, 77, 64);"></div></div> <div class="flex flex-col shadow-md justify-center items-center p-2 mx-2 h-auto bg-white-dark"><div class="w-16 h-8 flex justify-center items-start font-bold italic">
+    Prot.
+  </div> <div class="w-16 h-16" style="background: rgb(108, 111, 129);"></div><div class="w-16 h-16" style="background: rgb(90, 129, 223);"></div><div class="w-16 h-16" style="background: rgb(228, 202, 20);"></div><div class="w-16 h-16" style="background: rgb(72, 69, 62);"></div></div> <div class="flex flex-col shadow-md justify-center items-center p-2 mx-2 h-auto bg-white-dark"><div class="w-16 h-8 flex justify-center items-start font-bold italic">
+    Deut.
+  </div> <div class="w-16 h-16" style="background: rgb(132, 107, 84);"></div><div class="w-16 h-16" style="background: rgb(47, 134, 229);"></div><div class="w-16 h-16" style="background: rgb(255, 191, 50);"></div><div class="w-16 h-16" style="background: rgb(76, 67, 70);"></div></div> <div class="flex flex-col shadow-md justify-center items-center p-2 mx-2 h-auto bg-white-dark"><div class="w-16 h-8 flex justify-center items-start font-bold italic">
+    Trit.
+  </div> <div class="w-16 h-16" style="background: rgb(213, 48, 49);"></div><div class="w-16 h-16" style="background: rgb(0, 146, 156);"></div><div class="w-16 h-16" style="background: rgb(255, 182, 193);"></div><div class="w-16 h-16" style="background: rgb(24, 76, 82);"></div></div></div> <div class="flex flex-row justify-center items-stretch my-8"><div class="vc-chrome vc-chrome__disable-alpha"><div class="vc-chrome-saturation-wrap"><div class="vc-saturation" style="background: rgb(255, 0, 0);"><div class="vc-saturation--white"></div> <div class="vc-saturation--black"></div> <div class="vc-saturation-pointer" style="top: 101%; left: 0%;"><div class="vc-saturation-circle"></div></div></div></div> <div class="vc-chrome-body"><div class="vc-chrome-controls"><div class="vc-chrome-color-wrap"><div class="vc-chrome-active-color" style="background: rgb(0, 0, 0);"></div> <!----></div> <div class="vc-chrome-sliders"><div class="vc-chrome-hue-wrap"><div class="vc-hue vc-hue--horizontal"><div class="vc-hue-container"><div class="vc-hue-pointer" style="top: 0px; left: 0%;"><div class="vc-hue-picker"></div></div></div></div></div> <!----></div></div> <div class="vc-chrome-fields-wrap"><div class="vc-chrome-fields"><div class="vc-chrome-field"><div class="vc-editable-input"><input class="vc-input__input"> <span class="vc-input__label">hex</span> <span class="vc-input__desc"></span></div></div></div> <div class="vc-chrome-fields" style="display: none;"><div class="vc-chrome-field"><div class="vc-editable-input"><input class="vc-input__input"> <span class="vc-input__label">r</span> <span class="vc-input__desc"></span></div></div> <div class="vc-chrome-field"><div class="vc-editable-input"><input class="vc-input__input"> <span class="vc-input__label">g</span> <span class="vc-input__desc"></span></div></div> <div class="vc-chrome-field"><div class="vc-editable-input"><input class="vc-input__input"> <span class="vc-input__label">b</span> <span class="vc-input__desc"></span></div></div> <!----></div> <div class="vc-chrome-fields" style="display: none;"><div class="vc-chrome-field"><div class="vc-editable-input"><input class="vc-input__input"> <span class="vc-input__label">h</span> <span class="vc-input__desc"></span></div></div> <div class="vc-chrome-field"><div class="vc-editable-input"><input class="vc-input__input"> <span class="vc-input__label">s</span> <span class="vc-input__desc"></span></div></div> <div class="vc-chrome-field"><div class="vc-editable-input"><input class="vc-input__input"> <span class="vc-input__label">l</span> <span class="vc-input__desc"></span></div></div> <!----></div> <div class="vc-chrome-toggle-btn"><div class="vc-chrome-toggle-icon"><svg viewBox="0 0 24 24" style="width: 24px; height: 24px;"><path fill="#333" d="M12,18.17L8.83,15L7.42,16.41L12,21L16.59,16.41L15.17,15M12,5.83L15.17,9L16.58,7.59L12,3L7.41,7.59L8.83,9L12,5.83Z"></path></svg></div> <div class="vc-chrome-toggle-icon-highlight" style="display: none;"></div></div></div></div></div> <div class="flex flex-col items-center justify-around w-16 ml-8"><button aria-label="Delete color." disabled="disabled" class="flex justify-center items-center w-16 h-16 rounded-full border border-grey-darker text-grey-darker text-xl hover:shadow-md"><i class="fa fa-trash"></i></button> <button aria-label="Add color." class="w-16 h-16 rounded-full border border-solid border-grey-darker text-grey-darker text-xl flex justify-center items-center cursor-pointer hover:border-solid hover:font-bold hover:shadow-md"><i class="fa fa-plus"></i></button> <button aria-label="Reset colors to defaults." class="flex justify-center items-center w-16 h-16 rounded-full border border-grey-darker text-grey-darker text-xl hover:shadow-md"><i class="fa fa-refresh"></i></button></div></div> <p class="bg-grey-light p-3">
+      Click on one of the true colors to view or change it using the color picker. Click the <i aria-label="Icon for deletion." class="fa fa-trash"></i> button to remove a selected color from the color palette. Click the <i aria-label="Icon for new addition." class="fa fa-plus"></i> button to add a new color to the color palette. Click the <i aria-label="Icon for resetting to default." class="fa fa-refresh"></i> button to reset all of the colors to my defaults. Your color palette is encoded in the URL for this page while you work, so you can save or share a color palette by saving the URL when you are finished. For example, here are links to <a href="https://davidmathlogic.com/colorblind/#%23648FFF-%23785EF0-%23DC267F-%23FE6100-%23FFB000">the IBM design library "color blind safe" color palette</a> and to <a href="https://davidmathlogic.com/colorblind/#%23000000-%23E69F00-%2356B4E9-%23009E73-%23F0E442-%230072B2-%23D55E00-%23CC79A7">the "conservative 7-color palette adapted for color blindness"</a> from a <a href="https://www.nature.com/articles/nmeth.1618" rel="external">Wong 2011 article in <i>Nature.</i></a></p> <h2>There's more</h2> <p>
+      There are other types of colorblindness and color vision anomaly than the three types mentioned above. I recommend looking at <a href="https://en.wikipedia.org/wiki/Color_blindness#Types" rel="external">the Wikipedia entry on the subject</a> for more information. The most common type of color vision anomaly is deuteranomaly, which involves reduced sensitivity — but not blindness — to the green region of the spectrum. Deuteranomaly affects 1 in every 16 or 17 men and 1 in every 250 women. You can see a simulation of deuteranomalous vision below. 
+    </p> <div class="flex flex-row justify-center items-start pb-2 my-8"><div class="flex flex-col shadow-md justify-center items-center p-2 mx-2 h-auto bg-white-dark"><div class="w-16 h-8 flex justify-center items-start font-bold">
+    True
+  </div> <div class="w-16 h-16" style="background: rgb(216, 27, 96);"></div><div class="w-16 h-16" style="background: rgb(30, 136, 229);"></div><div class="w-16 h-16" style="background: rgb(255, 193, 7);"></div><div class="w-16 h-16" style="background: rgb(0, 77, 64);"></div></div> <div class="flex flex-col shadow-md justify-center items-center p-2 mx-2 h-auto bg-white-dark"><div class="w-16 h-8 flex justify-center items-start font-bold italic">
+    Dtnm.
+  </div> <div class="w-16 h-16" style="background: rgb(163, 78, 89);"></div><div class="w-16 h-16" style="background: rgb(41, 135, 229);"></div><div class="w-16 h-16" style="background: rgb(255, 192, 34);"></div><div class="w-16 h-16" style="background: rgb(48, 71, 68);"></div></div></div> <p>
+      The colorblindness simulations you see in the tool above are produced using state-of-the-art calculations. But while these calculations are widely used and broadly useful, the confusion lines used are imperfect and more study is required — especially regarding the rarer types of colorblindness — in order to say with certainty how exactly these simulations mirror the color vision of each person with colorblindness. 
+    </p> <h2>Red and green</h2> <p>
+      The three types of cone cell in your eye are each responsible for detecting a different primary color: red, green, and blue. Because anomalies in these cells interfere with a person's ability to see these colors normally, it is a bad idea to use a color palette of red, green, and blue. In particular, you should avoid the common practice of using red and green as contrasting colors. See why for yourself. 
+    </p> <div class="flex flex-row justify-center items-start pb-2 my-8"><div class="flex flex-col shadow-md justify-center items-center p-2 mx-2 h-auto bg-white-dark"><div class="w-16 h-8 flex justify-center items-start font-bold">
+    True
+  </div> <div class="w-16 h-16" style="background: rgb(255, 0, 0);"></div><div class="w-16 h-16" style="background: rgb(0, 255, 0);"></div></div> <div class="flex flex-col shadow-md justify-center items-center p-2 mx-2 h-auto bg-white-dark"><div class="w-16 h-8 flex justify-center items-start font-bold italic">
+    Prot.
+  </div> <div class="w-16 h-16" style="background: rgb(143, 126, 30);"></div><div class="w-16 h-16" style="background: rgb(248, 220, 0);"></div></div> <div class="flex flex-col shadow-md justify-center items-center p-2 mx-2 h-auto bg-white-dark"><div class="w-16 h-8 flex justify-center items-start font-bold italic">
+    Deut.
+  </div> <div class="w-16 h-16" style="background: rgb(161, 120, 0);"></div><div class="w-16 h-16" style="background: rgb(255, 213, 153);"></div></div></div> <p>
+      Most people who are colorblind have some form of red-green colorblindness, such as deuteranomaly, deuteranopia, or protanopia. To a person with one of these forms of colorblindness, it can difficult or impossible to distinguish whether a given color is red or green, and shades of red and green may have very low contrast. Instead of using a color palette of red and green, consider using a similar <i>magenta</i> and green  color palette instead. 
+    </p> <div class="flex flex-row justify-center items-start pb-2 my-8"><div class="flex flex-col shadow-md justify-center items-center p-2 mx-2 h-auto bg-white-dark"><div class="w-16 h-8 flex justify-center items-start font-bold">
+    True
+  </div> <div class="w-16 h-16" style="background: rgb(216, 27, 96);"></div><div class="w-16 h-16" style="background: rgb(0, 255, 0);"></div></div> <div class="flex flex-col shadow-md justify-center items-center p-2 mx-2 h-auto bg-white-dark"><div class="w-16 h-8 flex justify-center items-start font-bold italic">
+    Prot.
+  </div> <div class="w-16 h-16" style="background: rgb(82, 89, 117);"></div><div class="w-16 h-16" style="background: rgb(248, 220, 0);"></div></div> <div class="flex flex-col shadow-md justify-center items-center p-2 mx-2 h-auto bg-white-dark"><div class="w-16 h-8 flex justify-center items-start font-bold italic">
+    Deut.
+  </div> <div class="w-16 h-16" style="background: rgb(104, 86, 78);"></div><div class="w-16 h-16" style="background: rgb(255, 213, 153);"></div></div></div> <p>
+      Another common practice is to use red to highlight text. Again, this will not work well for some of your readers. People who are red-green colorblind will see a lower contrast between red text and the neutral colors which surround it. 
+    </p> <h2>Accessible palettes</h2> <p>
+      So what colors <i>should</i> you use? The colorpicker tool above is intended to give the freedom to choose your own colors while making sure that your color palette is accessible. But to get you started, here are some ideas. Here are 8 pairs of contrasting colors which maintain their contrast for people who are colorblind. Click on any of them to load it into the color palette selection tool above. 
+    </p> <div class="flex flex-wrap justify-around items-center my-8"><div class="flex justify-start items-center p-2 mb-4 w-64 shadow-md cursor-pointer hover:shadow-lg" style="border-top: 1px solid rgba(0, 0, 0, 0.05);"><div class="flex flex-col w-16 h-32"><div class="w-16 h-16" style="background: rgb(255, 194, 10);"></div><div class="w-16 h-16" style="background: rgb(12, 123, 220);"></div></div> <div class="flex flex-col h-32"><div class="h-16 pl-2 flex flex-col justify-center items-start"><span><b>HEX</b> #FFC20A</span> <span><b>R</b> 255 
+              <b>G</b> 194 
+              <b>B</b> 10
+            </span></div><div class="h-16 pl-2 flex flex-col justify-center items-start"><span><b>HEX</b> #0C7BDC</span> <span><b>R</b> 12 
+              <b>G</b> 123 
+              <b>B</b> 220
+            </span></div></div></div><div class="flex justify-start items-center p-2 mb-4 w-64 shadow-md cursor-pointer hover:shadow-lg" style="border-top: 1px solid rgba(0, 0, 0, 0.05);"><div class="flex flex-col w-16 h-32"><div class="w-16 h-16" style="background: rgb(153, 79, 0);"></div><div class="w-16 h-16" style="background: rgb(0, 108, 209);"></div></div> <div class="flex flex-col h-32"><div class="h-16 pl-2 flex flex-col justify-center items-start"><span><b>HEX</b> #994F00</span> <span><b>R</b> 153 
+              <b>G</b> 79 
+              <b>B</b> 0
+            </span></div><div class="h-16 pl-2 flex flex-col justify-center items-start"><span><b>HEX</b> #006CD1</span> <span><b>R</b> 0 
+              <b>G</b> 108 
+              <b>B</b> 209
+            </span></div></div></div><div class="flex justify-start items-center p-2 mb-4 w-64 shadow-md cursor-pointer hover:shadow-lg" style="border-top: 1px solid rgba(0, 0, 0, 0.05);"><div class="flex flex-col w-16 h-32"><div class="w-16 h-16" style="background: rgb(225, 190, 106);"></div><div class="w-16 h-16" style="background: rgb(64, 176, 166);"></div></div> <div class="flex flex-col h-32"><div class="h-16 pl-2 flex flex-col justify-center items-start"><span><b>HEX</b> #E1BE6A</span> <span><b>R</b> 225 
+              <b>G</b> 190 
+              <b>B</b> 106
+            </span></div><div class="h-16 pl-2 flex flex-col justify-center items-start"><span><b>HEX</b> #40B0A6</span> <span><b>R</b> 64 
+              <b>G</b> 176 
+              <b>B</b> 166
+            </span></div></div></div><div class="flex justify-start items-center p-2 mb-4 w-64 shadow-md cursor-pointer hover:shadow-lg" style="border-top: 1px solid rgba(0, 0, 0, 0.05);"><div class="flex flex-col w-16 h-32"><div class="w-16 h-16" style="background: rgb(230, 97, 0);"></div><div class="w-16 h-16" style="background: rgb(93, 58, 155);"></div></div> <div class="flex flex-col h-32"><div class="h-16 pl-2 flex flex-col justify-center items-start"><span><b>HEX</b> #E66100</span> <span><b>R</b> 230 
+              <b>G</b> 97 
+              <b>B</b> 0
+            </span></div><div class="h-16 pl-2 flex flex-col justify-center items-start"><span><b>HEX</b> #5D3A9B</span> <span><b>R</b> 93 
+              <b>G</b> 58 
+              <b>B</b> 155
+            </span></div></div></div><div class="flex justify-start items-center p-2 mb-4 w-64 shadow-md cursor-pointer hover:shadow-lg" style="border-top: 1px solid rgba(0, 0, 0, 0.05);"><div class="flex flex-col w-16 h-32"><div class="w-16 h-16" style="background: rgb(26, 255, 26);"></div><div class="w-16 h-16" style="background: rgb(75, 0, 146);"></div></div> <div class="flex flex-col h-32"><div class="h-16 pl-2 flex flex-col justify-center items-start"><span><b>HEX</b> #1AFF1A</span> <span><b>R</b> 26 
+              <b>G</b> 255 
+              <b>B</b> 26
+            </span></div><div class="h-16 pl-2 flex flex-col justify-center items-start"><span><b>HEX</b> #4B0092</span> <span><b>R</b> 75 
+              <b>G</b> 0 
+              <b>B</b> 146
+            </span></div></div></div><div class="flex justify-start items-center p-2 mb-4 w-64 shadow-md cursor-pointer hover:shadow-lg" style="border-top: 1px solid rgba(0, 0, 0, 0.05);"><div class="flex flex-col w-16 h-32"><div class="w-16 h-16" style="background: rgb(254, 254, 98);"></div><div class="w-16 h-16" style="background: rgb(211, 95, 183);"></div></div> <div class="flex flex-col h-32"><div class="h-16 pl-2 flex flex-col justify-center items-start"><span><b>HEX</b> #FEFE62</span> <span><b>R</b> 254 
+              <b>G</b> 254 
+              <b>B</b> 98
+            </span></div><div class="h-16 pl-2 flex flex-col justify-center items-start"><span><b>HEX</b> #D35FB7</span> <span><b>R</b> 211 
+              <b>G</b> 95 
+              <b>B</b> 183
+            </span></div></div></div><div class="flex justify-start items-center p-2 mb-4 w-64 shadow-md cursor-pointer hover:shadow-lg" style="border-top: 1px solid rgba(0, 0, 0, 0.05);"><div class="flex flex-col w-16 h-32"><div class="w-16 h-16" style="background: rgb(0, 90, 181);"></div><div class="w-16 h-16" style="background: rgb(220, 50, 32);"></div></div> <div class="flex flex-col h-32"><div class="h-16 pl-2 flex flex-col justify-center items-start"><span><b>HEX</b> #005AB5</span> <span><b>R</b> 0 
+              <b>G</b> 90 
+              <b>B</b> 181
+            </span></div><div class="h-16 pl-2 flex flex-col justify-center items-start"><span><b>HEX</b> #DC3220</span> <span><b>R</b> 220 
+              <b>G</b> 50 
+              <b>B</b> 32
+            </span></div></div></div><div class="flex justify-start items-center p-2 mb-4 w-64 shadow-md cursor-pointer hover:shadow-lg" style="border-top: 1px solid rgba(0, 0, 0, 0.05);"><div class="flex flex-col w-16 h-32"><div class="w-16 h-16" style="background: rgb(26, 133, 255);"></div><div class="w-16 h-16" style="background: rgb(212, 17, 89);"></div></div> <div class="flex flex-col h-32"><div class="h-16 pl-2 flex flex-col justify-center items-start"><span><b>HEX</b> #1A85FF</span> <span><b>R</b> 26 
+              <b>G</b> 133 
+              <b>B</b> 255
+            </span></div><div class="h-16 pl-2 flex flex-col justify-center items-start"><span><b>HEX</b> #D41159</span> <span><b>R</b> 212 
+              <b>G</b> 17 
+              <b>B</b> 89
+            </span></div></div></div></div> <p>
+      A number of color palettes have been developed with the intention of being accessible to people who are colorblind. Three of them appear below, from the <a href="https://www.ibm.com/design/language/resources/color-library" rel="external">IBM Design Library</a>, <a href="https://www.nature.com/articles/nmeth.1618" rel="external">Bang Wong</a>, and <a href="https://personal.sron.nl/~pault/" rel="external">Paul Tol</a> respectively. Click on any of them to load it into the color palette selection tool above. 
+    </p> <div class="flex flex-col items-center"><div class="p-2 my-4 shadow-md hover:shadow-lg cursor-pointer inline-block" style="border-top: 1px solid rgba(0, 0, 0, 0.05);"><h3 class="text-center">IBM</h3> <div class="flex flex-wrap justify-center"><div class="w-16 h-16" style="background: rgb(100, 143, 255);"></div><div class="w-16 h-16" style="background: rgb(120, 94, 240);"></div><div class="w-16 h-16" style="background: rgb(220, 38, 127);"></div><div class="w-16 h-16" style="background: rgb(254, 97, 0);"></div><div class="w-16 h-16" style="background: rgb(255, 176, 0);"></div></div></div><div class="p-2 my-4 shadow-md hover:shadow-lg cursor-pointer inline-block" style="border-top: 1px solid rgba(0, 0, 0, 0.05);"><h3 class="text-center">Wong</h3> <div class="flex flex-wrap justify-center"><div class="w-16 h-16" style="background: rgb(0, 0, 0);"></div><div class="w-16 h-16" style="background: rgb(230, 159, 0);"></div><div class="w-16 h-16" style="background: rgb(86, 180, 233);"></div><div class="w-16 h-16" style="background: rgb(0, 158, 115);"></div><div class="w-16 h-16" style="background: rgb(240, 228, 66);"></div><div class="w-16 h-16" style="background: rgb(0, 114, 178);"></div><div class="w-16 h-16" style="background: rgb(213, 94, 0);"></div><div class="w-16 h-16" style="background: rgb(204, 121, 167);"></div></div></div><div class="p-2 my-4 shadow-md hover:shadow-lg cursor-pointer inline-block" style="border-top: 1px solid rgba(0, 0, 0, 0.05);"><h3 class="text-center">Tol</h3> <div class="flex flex-wrap justify-center"><div class="w-16 h-16" style="background: rgb(51, 34, 136);"></div><div class="w-16 h-16" style="background: rgb(17, 119, 51);"></div><div class="w-16 h-16" style="background: rgb(68, 170, 153);"></div><div class="w-16 h-16" style="background: rgb(136, 204, 238);"></div><div class="w-16 h-16" style="background: rgb(221, 204, 119);"></div><div class="w-16 h-16" style="background: rgb(204, 102, 119);"></div><div class="w-16 h-16" style="background: rgb(170, 68, 153);"></div><div class="w-16 h-16" style="background: rgb(136, 34, 85);"></div></div></div></div> <h2>Beyond colors</h2> <p>
+      It is a good practice to, where possible, avoid conveying information purely through color. You should always consider adding other ways to convey the same information besides just color. For example, you might use text, symbols, or patterns. In a bar chart with bars of different colors, consider also giving the bars different patterns; perhaps bars of one color could also be dotted in black, while bars of another color could be overlaid with a crosshatch pattern. If you are using color to emphasize text, consider also using italics or boldface or some other form of emphasis as well. 
+    </p></main> <footer class="h-12 text-sm flex justify-center items-center">
+    © David Nichols
+  </footer></div><script type="text/javascript" src="./Coloring for Colorblindness_files/manifest.0856859c6057891505fd.js.download"></script><script type="text/javascript" src="./Coloring for Colorblindness_files/vendor.4efe23f74212cc0d1dcf.js.download"></script><script type="text/javascript" src="./Coloring for Colorblindness_files/app.2f797ae18d01032f91b8.js.download"></script><span class="_hsShareImage hsShareImage">&nbsp;</span></body></html>
